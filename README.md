@@ -1,7 +1,7 @@
 # 🌰 WordNut - İngilizce Kelime Öğrenme Uygulaması
 
 <div align="center">
-  <img src="wordnut/Assets.xcassets/AppIcon.appiconset/1024.png" width="120" height="120" alt="WordNut Logo">
+  <img src="https://raw.githubusercontent.com/basakstuff/WordNutPages/refs/heads/main/1024.png" width="120" height="120" alt="WordNut Logo">
   
   ### 📚 İngilizce kelimeleri eğlenceli ve etkili bir şekilde öğrenin!
   
@@ -144,9 +144,8 @@ WordNut, İngilizce kelime öğrenmeyi kolaylaştıran, kullanıcı dostu bir iO
 
 ## 📞 Destek ve İletişim
 
-- **E-posta**: support@wordnut.app
+- **E-posta**: spikedevsup@gmail.com
 - **Uygulama İçi**: Ayarlar > Geri Bildirim
-- **Sosyal Medya**: [Twitter](https://twitter.com/wordnutapp)
 
 ---
 
