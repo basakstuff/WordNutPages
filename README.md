@@ -5,9 +5,8 @@
   
   ### 📚 İngilizce kelimeleri eğlenceli ve etkili bir şekilde öğrenin!
   
-  [![iOS](https://img.shields.io/badge/iOS-15.0+-blue.svg)](https://developer.apple.com/ios/)
-  [![Swift](https://img.shields.io/badge/Swift-5.0+-orange.svg)](https://swift.org/)
-  [![SwiftUI](https://img.shields.io/badge/SwiftUI-4.0+-green.svg)](https://developer.apple.com/xcode/swiftui/)
+  [Privacy Policy](https://basakstuff.github.io/WordNutPages/privacy-policy.html)
+  [Terms of Service](https://basakstuff.github.io/WordNutPages/terms-of-service.html)
 </div>
 
 ---
