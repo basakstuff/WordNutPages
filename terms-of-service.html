@@ -2,28 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WordNut - Terms of Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WordNut – Terms of Service</title>
     <style>
+      :root {
+        --accent: #3498db;
+        --accent-dark: #2c3e50;
+        --warning: #ffc107;
+        --danger: #dc3545;
+        --bg: #f8f9fa;
+        --text: #333;
+      }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Helvetica, Arial, sans-serif;
         line-height: 1.6;
-        color: #333;
-        max-width: 800px;
-        margin: 0 auto;
+        color: var(--text);
+        background-color: var(--bg);
+        margin: 0;
         padding: 20px;
-        background-color: #f8f9fa;
       }
       .container {
-        background: white;
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
         border-radius: 8px;
         padding: 40px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
       h1 {
-        color: #2c3e50;
-        border-bottom: 3px solid #3498db;
+        color: var(--accent-dark);
+        border-bottom: 3px solid var(--accent);
         padding-bottom: 10px;
         margin-bottom: 30px;
       }
@@ -37,8 +46,8 @@
         margin-bottom: 30px;
       }
       .lang-btn {
-        background: #3498db;
-        color: white;
+        background: var(--accent);
+        color: #fff;
         border: none;
         padding: 8px 16px;
         margin: 0 5px;
@@ -46,12 +55,15 @@
         cursor: pointer;
         text-decoration: none;
         display: inline-block;
+        transition: background 0.2s ease;
       }
-      .lang-btn:hover {
+      .lang-btn:hover,
+      .lang-btn:focus {
         background: #2980b9;
+        outline: none;
       }
       .lang-btn.active {
-        background: #2c3e50;
+        background: var(--accent-dark);
       }
       .content {
         display: none;
@@ -59,12 +71,21 @@
       .content.active {
         display: block;
       }
-      .footer {
-        text-align: center;
-        margin-top: 40px;
-        padding-top: 20px;
-        border-top: 1px solid #eee;
-        color: #666;
+      .highlight,
+      .warning {
+        padding: 15px;
+        margin: 20px 0;
+        border-left: 4px solid;
+        border-radius: 4px;
+        background-color: #fff;
+      }
+      .highlight {
+        background-color: #fff3cd;
+        border-color: var(--warning);
+      }
+      .warning {
+        background-color: #f8d7da;
+        border-color: var(--danger);
       }
       ul {
         margin: 10px 0;
@@ -73,30 +94,37 @@
       li {
         margin: 5px 0;
       }
-      .highlight {
-        background-color: #fff3cd;
-        padding: 15px;
-        border-left: 4px solid #ffc107;
-        margin: 20px 0;
-      }
-      .warning {
-        background-color: #f8d7da;
-        padding: 15px;
-        border-left: 4px solid #dc3545;
-        margin: 20px 0;
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        color: #666;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="lang-switch">
-        <button class="lang-btn active" onclick="showLanguage('en')">
+      <div class="lang-switch" role="tablist" aria-label="Language selector">
+        <button
+          type="button"
+          class="lang-btn active"
+          data-lang="en"
+          aria-selected="true"
+        >
           English
         </button>
-        <button class="lang-btn" onclick="showLanguage('tr')">Türkçe</button>
+        <button
+          type="button"
+          class="lang-btn"
+          data-lang="tr"
+          aria-selected="false"
+        >
+          Türkçe
+        </button>
       </div>
 
-      <div id="en-content" class="content active">
+      <div id="en-content" class="content active" role="tabpanel">
         <h1>WordNut Terms of Service</h1>
 
         <div class="highlight">
@@ -105,159 +133,140 @@
         </div>
 
         <p>
-          Welcome to WordNut! These Terms of Service ("Terms") govern your use
-          of the WordNut mobile application ("App") operated by Spikedev ("we,"
-          "us," or "our").
+          Welcome to WordNut! These Terms of Service (“Terms”) govern your use
+          of the WordNut mobile application (“App”) operated by Spikedev (“we,”
+          “us,” or “our”).
         </p>
 
         <h2>1. Acceptance of Terms</h2>
         <p>
           By downloading, installing, or using WordNut, you agree to be bound by
-          these Terms. If you do not agree to these Terms, please do not use our
-          App.
+          these Terms. If you do not agree, please do not use the App.
         </p>
 
         <h2>2. Description of Service</h2>
         <p>
-          WordNut is an English vocabulary learning application that provides:
+          WordNut is a premium English vocabulary learning application available
+          through a single, one-time purchase. Once unlocked, you receive full
+          access to:
         </p>
         <ul>
           <li>Interactive vocabulary quizzes and exercises</li>
-          <li>Word definitions, pronunciations, and examples</li>
-          <li>Progress tracking and statistics</li>
+          <li>Word definitions, pronunciations, and example sentences</li>
+          <li>Progress tracking and performance analytics</li>
           <li>Personalized learning recommendations</li>
-          <li>Premium features through in-app purchases</li>
+          <li>All current and future premium features released for the App</li>
         </ul>
 
         <h2>3. User Accounts and Registration</h2>
         <p>
-          WordNut does not require account creation. All user data is stored
-          locally on your device with optional iCloud backup synchronization.
+          WordNut does not require user accounts. All data is stored locally on
+          your device with optional iCloud backup synchronization.
         </p>
 
         <h2>4. User Conduct</h2>
-        <p>
-          You agree to use WordNut only for lawful purposes and in accordance
-          with these Terms. You agree not to:
-        </p>
+        <p>You agree to use WordNut lawfully and in accordance with these Terms. You must not:</p>
         <ul>
-          <li>Use the App for any illegal or unauthorized purpose</li>
-          <li>Attempt to reverse engineer or modify the App</li>
-          <li>Interfere with the App's security features</li>
+          <li>Use the App for illegal or unauthorized purposes</li>
+          <li>Reverse engineer, decompile, or modify the App</li>
+          <li>Interfere with security features or content delivery</li>
           <li>Distribute malware or harmful content</li>
-          <li>Violate any applicable laws or regulations</li>
+          <li>Violate applicable laws, regulations, or rights of others</li>
         </ul>
 
-        <h2>5. In-App Purchases and Subscriptions</h2>
-        <p>WordNut offers premium features through in-app purchases:</p>
-        <ul>
-          <li>
-            <strong>Monthly Subscription:</strong> Access to premium features
-            billed monthly
-          </li>
-          <li>
-            <strong>Yearly Subscription:</strong> Access to premium features
-            billed annually
-          </li>
-          <li>
-            <strong>Lifetime Access:</strong> One-time purchase for permanent
-            premium access
-          </li>
-        </ul>
+        <h2>5. One-Time Purchase Access</h2>
+        <p>
+          WordNut’s full experience is unlocked through a single, non-recurring
+          purchase. All content and premium functionality become available after
+          the purchase is completed.
+        </p>
 
         <h3>5.1 Payment Terms</h3>
         <ul>
-          <li>All purchases are processed through the Apple App Store</li>
-          <li>Payments are charged to your iTunes account</li>
-          <li>Subscriptions automatically renew unless cancelled</li>
-          <li>You can manage subscriptions in your device settings</li>
+          <li>Transactions are processed by the Apple App Store</li>
+          <li>Charges are billed to your Apple ID account at confirmation</li>
+          <li>The purchase grants ongoing access tied to your Apple ID</li>
+          <li>You may reinstall the App and restore access without extra fees</li>
         </ul>
 
         <h3>5.2 Refund Policy</h3>
         <ul>
-          <li>Refunds are subject to Apple's App Store refund policy</li>
-          <li>Contact Apple Support for refund requests</li>
-          <li>We cannot process refunds directly</li>
+          <li>Refunds follow Apple’s App Store policies and procedures</li>
+          <li>Submit refund requests directly to Apple Support</li>
+          <li>Spikedev cannot issue refunds outside the App Store system</li>
         </ul>
 
         <h2>6. Content and Intellectual Property</h2>
-        <p>
-          WordNut and its content are protected by intellectual property laws:
-        </p>
+        <p>WordNut and its content are protected by intellectual property laws:</p>
         <ul>
-          <li>All App content is owned by Spikedev or licensed to us</li>
+          <li>All content is owned by or licensed to Spikedev</li>
           <li>You may not copy, modify, or distribute App content</li>
-          <li>Trademarks and logos are property of their respective owners</li>
+          <li>Trademarks and logos belong to their respective owners</li>
           <li>User-generated content remains your property</li>
         </ul>
 
         <h2>7. Privacy and Data Protection</h2>
         <p>
-          Your privacy is important to us. Our Privacy Policy explains how we
-          collect, use, and protect your information. By using WordNut, you
-          consent to our Privacy Policy.
+          Your privacy matters to us. Our Privacy Policy explains how we collect,
+          use, and protect your information. By using WordNut, you consent to
+          the Policy.
         </p>
 
-        <h2>8. Disclaimers and Limitations</h2>
+        <h2>8. Disclaimers</h2>
         <div class="warning">
-          <p>
-            <strong>IMPORTANT:</strong> WordNut is provided "as is" without
-            warranties of any kind.
-          </p>
+          <p><strong>Important:</strong> WordNut is provided “as is” without warranties.</p>
         </div>
         <ul>
-          <li>We do not guarantee uninterrupted or error-free service</li>
+          <li>No guarantee of uninterrupted or error-free service</li>
           <li>Educational content is for informational purposes only</li>
-          <li>We are not responsible for learning outcomes</li>
-          <li>Use the App at your own risk</li>
+          <li>We are not responsible for learning outcomes or results</li>
+          <li>You use the App at your own risk</li>
         </ul>
 
         <h2>9. Limitation of Liability</h2>
         <p>
-          To the maximum extent permitted by law, Spikedev shall not be liable
-          for any indirect, incidental, special, consequential, or punitive
-          damages arising from your use of WordNut.
+          To the maximum extent permitted by law, Spikedev is not liable for
+          indirect, incidental, special, consequential, or punitive damages
+          arising from use of WordNut.
         </p>
 
         <h2>10. Service Modifications</h2>
-        <p>We reserve the right to:</p>
+        <p>We may, at our discretion:</p>
         <ul>
-          <li>Modify or discontinue features at any time</li>
-          <li>Update the App with new versions</li>
-          <li>Change pricing for premium features</li>
-          <li>Suspend or terminate service if necessary</li>
+          <li>Modify or discontinue features without notice</li>
+          <li>Release updates and new versions</li>
+          <li>Adjust pricing for future offerings or bundles</li>
+          <li>Suspend or terminate access when necessary</li>
         </ul>
 
         <h2>11. Termination</h2>
         <p>
-          These Terms remain in effect until terminated by either party. You may
-          terminate by deleting the App. We may terminate or suspend your access
-          for violations of these Terms.
+          These Terms remain in effect until terminated. You may end them by
+          deleting the App. We may suspend or terminate access for violations.
         </p>
 
         <h2>12. Governing Law</h2>
         <p>
-          These Terms are governed by and construed in accordance with the laws
-          of Turkey, without regard to conflict of law principles.
+          These Terms are governed by the laws of Turkey, excluding conflict of
+          law principles.
         </p>
 
         <h2>13. Changes to Terms</h2>
         <p>
-          We may update these Terms from time to time. We will notify you of
-          material changes through the App or other communication methods.
-          Continued use constitutes acceptance of updated Terms.
+          We may update these Terms periodically. Material changes will be
+          communicated through the App or other methods. Continued use signifies
+          acceptance.
         </p>
 
         <h2>14. Contact Information</h2>
-        <p>For questions about these Terms, please contact us at:</p>
         <p>
-          <strong>Email:</strong> spikedevsup@gmail.com <br />
-          <strong>App Store:</strong> WordNut - English Vocabulary Learning<br />
+          <strong>Email:</strong> spikedevsup@gmail.com<br />
+          <strong>App Store:</strong> WordNut – English Vocabulary Learning<br />
           <strong>Developer:</strong> Spikedev
         </p>
       </div>
 
-      <div id="tr-content" class="content">
+      <div id="tr-content" class="content" role="tabpanel" aria-hidden="true">
         <h1>WordNut Hizmet Şartları</h1>
 
         <div class="highlight">
@@ -266,166 +275,140 @@
         </div>
 
         <p>
-          WordNut'a hoş geldiniz! Bu Hizmet Şartları ("Şartlar") Spikedev
-          ("biz," "bizim," veya "bize") tarafından işletilen WordNut mobil
-          uygulamasının ("Uygulama") kullanımını yönetir.
+          WordNut’a hoş geldiniz! Bu Hizmet Şartları (“Şartlar”) Spikedev (“biz”,
+          “bizim” veya “bize”) tarafından işletilen WordNut mobil uygulamasının
+          (“Uygulama”) kullanımını düzenler.
         </p>
 
         <h2>1. Şartların Kabulü</h2>
         <p>
-          WordNut'u indirerek, yükleyerek veya kullanarak bu Şartlara bağlı
-          olmayı kabul edersiniz. Bu Şartları kabul etmiyorsanız, lütfen
-          Uygulamamızı kullanmayın.
+          WordNut’u indirerek, yükleyerek veya kullanarak bu Şartlara bağlı
+          olmayı kabul edersiniz. Kabul etmiyorsanız lütfen Uygulamayı kullanmayın.
         </p>
 
         <h2>2. Hizmet Açıklaması</h2>
         <p>
-          WordNut, aşağıdakileri sağlayan bir İngilizce kelime öğrenme
-          uygulamasıdır:
+          WordNut, tek seferlik satın alma ile erişilen premium bir İngilizce
+          kelime öğrenme uygulamasıdır. Satın alma tamamlandığında aşağıdaki tüm
+          içerik ve özellikler açılır:
         </p>
         <ul>
-          <li>Interaktif kelime quizleri ve alıştırmalar</li>
-          <li>Kelime tanımları, telaffuzlar ve örnekler</li>
-          <li>İlerleme takibi ve istatistikler</li>
+          <li>Etkileşimli kelime quizleri ve alıştırmalar</li>
+          <li>Kelime tanımları, telaffuzlar ve örnek cümleler</li>
+          <li>İlerleme takibi ve performans analizleri</li>
           <li>Kişiselleştirilmiş öğrenme önerileri</li>
-          <li>Uygulama içi satın almalar yoluyla premium özellikler</li>
+          <li>Uygulamaya eklenen tüm mevcut ve gelecekteki premium özellikler</li>
         </ul>
 
         <h2>3. Kullanıcı Hesapları ve Kayıt</h2>
         <p>
-          WordNut hesap oluşturmayı gerektirmez. Tüm kullanıcı verileri
-          cihazınızda yerel olarak saklanır ve isteğe bağlı iCloud yedekleme
-          senkronizasyonu bulunur.
+          WordNut hesap oluşturmayı gerektirmez. Veriler cihazınızda yerel olarak
+          saklanır ve isteğe bağlı iCloud yedeklemesi sunulur.
         </p>
 
         <h2>4. Kullanıcı Davranışı</h2>
         <p>
-          WordNut'u yalnızca yasal amaçlarla ve bu Şartlara uygun olarak
-          kullanmayı kabul edersiniz. Şunları yapmamayı kabul edersiniz:
+          WordNut’u yasalara uygun ve bu Şartlara bağlı kalarak kullanmayı kabul
+          edersiniz. Aşağıdakileri yapmamayı taahhüt edersiniz:
         </p>
         <ul>
-          <li>
-            Uygulamayı herhangi bir yasadışı veya yetkisiz amaç için kullanmak
-          </li>
-          <li>
-            Uygulamayı tersine mühendislik yapmaya veya değiştirmeye çalışmak
-          </li>
-          <li>Uygulamanın güvenlik özelliklerine müdahale etmek</li>
-          <li>Zararlı yazılım veya zararlı içerik dağıtmak</li>
-          <li>Geçerli yasa veya düzenlemeleri ihlal etmek</li>
+          <li>Uygulamayı yasa dışı veya yetkisiz amaçlarla kullanmak</li>
+          <li>Tersine mühendislik yapmak, derlemeyi çözmek veya değiştirmek</li>
+          <li>Güvenlik özelliklerine müdahale etmek veya engellemek</li>
+          <li>Zararlı yazılım veya içerik dağıtmak</li>
+          <li>Yürürlükteki kanunları, düzenlemeleri veya üçüncü taraf haklarını ihlal etmek</li>
         </ul>
 
-        <h2>5. Uygulama İçi Satın Almalar ve Abonelikler</h2>
+        <h2>5. Tek Seferlik Satın Alma Erişimi</h2>
         <p>
-          WordNut uygulama içi satın almalar yoluyla premium özellikler sunar:
+          WordNut’un tüm deneyimi tek seferlik, yinelenmeyen bir satın alma ile
+          açılır. Satın alma sonrasında tüm içerik ve premium işlevler kullanılabilir.
         </p>
-        <ul>
-          <li>
-            <strong>Aylık Abonelik:</strong> Aylık faturalandırılan premium
-            özelliklere erişim
-          </li>
-          <li>
-            <strong>Yıllık Abonelik:</strong> Yıllık faturalandırılan premium
-            özelliklere erişim
-          </li>
-          <li>
-            <strong>Yaşam Boyu Erişim:</strong> Kalıcı premium erişim için tek
-            seferlik satın alma
-          </li>
-        </ul>
 
         <h3>5.1 Ödeme Koşulları</h3>
         <ul>
-          <li>Tüm satın almalar Apple App Store üzerinden işlenir</li>
-          <li>Ödemeler iTunes hesabınızdan alınır</li>
-          <li>Abonelikler iptal edilmediği sürece otomatik olarak yenilenir</li>
-          <li>Abonelikleri cihaz ayarlarınızdan yönetebilirsiniz</li>
+          <li>Satın almalar Apple App Store üzerinden gerçekleştirilir</li>
+          <li>Ücret, onay sırasında Apple kimliğinizden tahsil edilir</li>
+          <li>Satın alma, Apple kimliğinize bağlı kalıcı erişim sağlar</li>
+          <li>Uygulamayı yeniden yükleyip erişimi ek ücret ödemeden geri alabilirsiniz</li>
         </ul>
 
         <h3>5.2 İade Politikası</h3>
         <ul>
-          <li>İadeler Apple'ın App Store iade politikasına tabidir</li>
-          <li>İade talepleri için Apple Destek ile iletişime geçin</li>
-          <li>Doğrudan iade işlemi yapamayız</li>
+          <li>İadeler Apple’ın App Store politikalarına tabidir</li>
+          <li>İade talepleri için doğrudan Apple Destek ile iletişime geçmeniz gerekir</li>
+          <li>Spikedev App Store sistemi dışında iade gerçekleştiremez</li>
         </ul>
 
         <h2>6. İçerik ve Fikri Mülkiyet</h2>
-        <p>WordNut ve içeriği fikri mülkiyet yasalarıyla korunmaktadır:</p>
+        <p>
+          WordNut ve içeriği fikri mülkiyet yasaları kapsamında korunur:
+        </p>
         <ul>
-          <li>
-            Tüm Uygulama içeriği Spikedev'e aittir veya bize lisanslanmıştır
-          </li>
-          <li>
-            Uygulama içeriğini kopyalayamaz, değiştiremez veya dağıtamazsınız
-          </li>
-          <li>Ticari markalar ve logolar kendi sahiplerinin mülkiyetindedir</li>
-          <li>Kullanıcı tarafından oluşturulan içerik sizin mülkiyetinizdir</li>
+          <li>Tüm içerik Spikedev’e aittir veya bize lisanslanmıştır</li>
+          <li>İçeriği kopyalayamaz, değiştiremez veya dağıtamazsınız</li>
+          <li>Markalar ve logolar kendi sahiplerinin mülkiyetindedir</li>
+          <li>Kullanıcı tarafından oluşturulan içerik sizin mülkiyetinizde kalır</li>
         </ul>
 
         <h2>7. Gizlilik ve Veri Koruma</h2>
         <p>
-          Gizliliğiniz bizim için önemlidir. Gizlilik Politikamız bilgilerinizi
-          nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar. WordNut'u
-          kullanarak Gizlilik Politikamızı kabul etmiş olursunuz.
+          Gizlilik bizim için önemlidir. Gizlilik Politikamız, verilerinizi nasıl
+          topladığımızı, kullandığımızı ve koruduğumuzu açıklar. WordNut’u
+          kullanarak bu politikayı kabul etmiş olursunuz.
         </p>
 
-        <h2>8. Feragatnameler ve Sınırlamalar</h2>
+        <h2>8. Feragatnameler</h2>
         <div class="warning">
-          <p>
-            <strong>ÖNEMLİ:</strong> WordNut "olduğu gibi" herhangi bir garanti
-            olmaksızın sağlanmaktadır.
-          </p>
+          <p><strong>Önemli:</strong> WordNut “olduğu gibi” herhangi bir garanti olmadan sunulur.</p>
         </div>
         <ul>
-          <li>Kesintisiz veya hatasız hizmet garantisi vermiyoruz</li>
-          <li>Eğitim içeriği yalnızca bilgilendirme amaçlıdır</li>
-          <li>Öğrenme sonuçlarından sorumlu değiliz</li>
-          <li>Uygulamayı kendi riskinizde kullanın</li>
+          <li>Kesintisiz veya hatasız hizmet garantisi verilmez</li>
+          <li>Eğitim içerikleri bilgilendirme amaçlıdır</li>
+          <li>Öğrenme sonuçlarından sorumlu tutulamayız</li>
+          <li>Uygulamayı kendi sorumluluğunuzda kullanırsınız</li>
         </ul>
 
         <h2>9. Sorumluluk Sınırlaması</h2>
         <p>
           Yasaların izin verdiği azami ölçüde, Spikedev WordNut kullanımınızdan
           kaynaklanan dolaylı, arızi, özel, sonuçsal veya cezai zararlardan
-          sorumlu olmayacaktır.
+          sorumlu tutulamaz.
         </p>
 
         <h2>10. Hizmet Değişiklikleri</h2>
         <p>Aşağıdaki hakları saklı tutarız:</p>
         <ul>
-          <li>Özellikleri istediğimiz zaman değiştirmek veya durdurmak</li>
+          <li>Özellikleri haber vermeden değiştirmek veya sonlandırmak</li>
           <li>Uygulamayı yeni sürümlerle güncellemek</li>
-          <li>Premium özellikler için fiyatlandırmayı değiştirmek</li>
-          <li>Gerekirse hizmeti askıya almak veya sonlandırmak</li>
+          <li>Gelecekteki paket veya teklifler için fiyatları revize etmek</li>
+          <li>Gerektiğinde erişimi askıya almak veya sonlandırmak</li>
         </ul>
 
         <h2>11. Sonlandırma</h2>
         <p>
-          Bu Şartlar herhangi bir tarafça sonlandırılana kadar yürürlükte kalır.
-          Uygulamayı silerek sonlandırabilirsiniz. Bu Şartların ihlali durumunda
-          erişiminizi sonlandırabiliriz.
+          Bu Şartlar taraflardan biri tarafından sonlandırılana kadar geçerlidir.
+          Uygulamayı silerek sonlandırabilirsiniz. Şartların ihlali durumunda
+          erişim sonlandırılabilir.
         </p>
 
         <h2>12. Yürürlükteki Hukuk</h2>
         <p>
-          Bu Şartlar, hukuk ihtilafı prensipleri dikkate alınmaksızın Türkiye
-          yasalarına göre yönetilir ve yorumlanır.
+          Şartlar, hukuk ihtilafı kuralları hariç olmak üzere Türkiye Cumhuriyeti
+          yasalarına tabidir.
         </p>
 
         <h2>13. Şartlarda Değişiklikler</h2>
         <p>
-          Bu Şartları zaman zaman güncelleyebiliriz. Önemli değişiklikleri
-          Uygulama veya diğer iletişim yöntemleri aracılığıyla bildireceğiz.
-          Devam eden kullanım, güncellenen Şartların kabulü anlamına gelir.
+          Şartları zaman zaman güncelleyebiliriz. Önemli değişiklikler Uygulama
+          veya diğer iletişim yollarıyla bildirilir. Kullanıma devam etmeniz
+          güncellenen Şartları kabul ettiğiniz anlamına gelir.
         </p>
 
         <h2>14. İletişim Bilgileri</h2>
         <p>
-          Bu Şartlar hakkında sorularınız için lütfen bizimle iletişime geçin:
-        </p>
-        <p>
-          <strong>E-posta:</strong> spikedevsup@gmail.com <br />
-          <strong>App Store:</strong> WordNut - English Vocabulary Learning<br />
+          <strong>E-posta:</strong> spikedevsup@gmail.com<br />
+          <strong>App Store:</strong> WordNut – English Vocabulary Learning<br />
           <strong>Geliştirici:</strong> Spikedev
         </p>
       </div>
@@ -436,19 +419,26 @@
     </div>
 
     <script>
+      const buttons = document.querySelectorAll(".lang-btn");
+      const contentSections = document.querySelectorAll(".content");
+
       function showLanguage(lang) {
-        // Hide all content
-        document.getElementById("en-content").classList.remove("active");
-        document.getElementById("tr-content").classList.remove("active");
+        contentSections.forEach((section) => {
+          const isActive = section.id === `${lang}-content`;
+          section.classList.toggle("active", isActive);
+          section.setAttribute("aria-hidden", !isActive);
+        });
 
-        // Remove active class from all buttons
-        const buttons = document.querySelectorAll(".lang-btn");
-        buttons.forEach((btn) => btn.classList.remove("active"));
-
-        // Show selected content and activate button
-        document.getElementById(lang + "-content").classList.add("active");
-        event.target.classList.add("active");
+        buttons.forEach((btn) => {
+          const isActive = btn.dataset.lang === lang;
+          btn.classList.toggle("active", isActive);
+          btn.setAttribute("aria-selected", isActive);
+        });
       }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => showLanguage(btn.dataset.lang));
+      });
     </script>
   </body>
 </html>
