@@ -2,28 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WordNut - Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WordNut – Privacy Policy</title>
     <style>
+      :root {
+        --accent: #3498db;
+        --accent-dark: #2c3e50;
+        --highlight: #fff3cd;
+        --bg: #f8f9fa;
+        --text: #333;
+      }
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Helvetica, Arial, sans-serif;
         line-height: 1.6;
-        color: #333;
-        max-width: 800px;
-        margin: 0 auto;
+        color: var(--text);
+        background-color: var(--bg);
+        margin: 0;
         padding: 20px;
-        background-color: #f8f9fa;
       }
       .container {
-        background: white;
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
         border-radius: 8px;
         padding: 40px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
       h1 {
-        color: #2c3e50;
-        border-bottom: 3px solid #3498db;
+        color: var(--accent-dark);
+        border-bottom: 3px solid var(--accent);
         padding-bottom: 10px;
         margin-bottom: 30px;
       }
@@ -32,39 +40,40 @@
         margin-top: 30px;
         margin-bottom: 15px;
       }
+      .highlight {
+        background-color: var(--highlight);
+        padding: 15px;
+        border-left: 4px solid #ffc107;
+        border-radius: 4px;
+        margin: 20px 0;
+      }
       .lang-switch {
         text-align: center;
         margin-bottom: 30px;
       }
       .lang-btn {
-        background: #3498db;
-        color: white;
+        background: var(--accent);
+        color: #fff;
         border: none;
         padding: 8px 16px;
         margin: 0 5px;
         border-radius: 4px;
         cursor: pointer;
-        text-decoration: none;
-        display: inline-block;
+        transition: background 0.2s ease;
       }
-      .lang-btn:hover {
+      .lang-btn:hover,
+      .lang-btn:focus {
         background: #2980b9;
+        outline: none;
       }
       .lang-btn.active {
-        background: #2c3e50;
+        background: var(--accent-dark);
       }
       .content {
         display: none;
       }
       .content.active {
         display: block;
-      }
-      .footer {
-        text-align: center;
-        margin-top: 40px;
-        padding-top: 20px;
-        border-top: 1px solid #eee;
-        color: #666;
       }
       ul {
         margin: 10px 0;
@@ -73,24 +82,37 @@
       li {
         margin: 5px 0;
       }
-      .highlight {
-        background-color: #fff3cd;
-        padding: 15px;
-        border-left: 4px solid #ffc107;
-        margin: 20px 0;
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        color: #666;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="lang-switch">
-        <button class="lang-btn active" onclick="showLanguage('en')">
+      <div class="lang-switch" role="tablist" aria-label="Language selector">
+        <button
+          type="button"
+          class="lang-btn active"
+          data-lang="en"
+          aria-selected="true"
+        >
           English
         </button>
-        <button class="lang-btn" onclick="showLanguage('tr')">Türkçe</button>
+        <button
+          type="button"
+          class="lang-btn"
+          data-lang="tr"
+          aria-selected="false"
+        >
+          Türkçe
+        </button>
       </div>
 
-      <div id="en-content" class="content active">
+      <div id="en-content" class="content active" role="tabpanel">
         <h1>WordNut Privacy Policy</h1>
 
         <div class="highlight">
@@ -99,9 +121,10 @@
         </div>
 
         <p>
-          WordNut ("we," "our," or "us") is committed to protecting your
+          WordNut (“we,” “our,” or “us”) is committed to protecting your
           privacy. This Privacy Policy explains how we collect, use, disclose,
-          and safeguard your information when you use our mobile application.
+          and safeguard your information when you use our premium mobile
+          application.
         </p>
 
         <h2>1. Information We Collect</h2>
@@ -128,211 +151,182 @@
             app version
           </li>
           <li>
-            <strong>Usage Analytics:</strong> App features used, session
-            duration, crash reports
+            <strong>Usage Analytics:</strong> Features used, session duration,
+            aggregated usage trends
           </li>
           <li>
-            <strong>Performance Data:</strong> Loading times, error logs, and
+            <strong>Performance Data:</strong> Crash reports, loading times, and
             technical diagnostics
           </li>
         </ul>
 
         <h2>2. How We Use Your Information</h2>
-        <p>We use the collected information to:</p>
+        <p>We use collected information to:</p>
         <ul>
-          <li>Provide and maintain the app functionality</li>
-          <li>Personalize your learning experience</li>
-          <li>Track your progress and provide statistics</li>
-          <li>Improve app performance and user experience</li>
-          <li>Provide customer support</li>
-          <li>Analyze usage patterns for app improvements</li>
+          <li>Deliver and maintain the full premium app experience</li>
+          <li>Personalize content and recommendations</li>
+          <li>Track your learning progress and provide statistics</li>
+          <li>Monitor performance and improve stability</li>
+          <li>Respond to support requests</li>
+          <li>Analyze usage trends to guide product improvements</li>
         </ul>
 
         <h2>3. Data Storage and Security</h2>
-        <p>
-          Your data is stored locally on your device and in secure cloud
-          services:
-        </p>
+        <p>Your data is stored locally and, if enabled, securely backed up:</p>
         <ul>
           <li>
-            <strong>Local Storage:</strong> Core app data is stored locally
-            using iOS secure storage
+            <strong>Local Storage:</strong> Core app data is stored on your
+            device using iOS secure storage mechanisms
           </li>
           <li>
-            <strong>Cloud Backup:</strong> Optional backup to iCloud for data
-            synchronization
+            <strong>Cloud Backup:</strong> Optional iCloud synchronization is
+            available for seamless device restoration
           </li>
           <li>
-            <strong>Security:</strong> We implement industry-standard encryption
-            and security measures
+            <strong>Security:</strong> We use industry-standard safeguards and
+            encryption for data in transit and at rest
           </li>
         </ul>
 
         <h2>4. Third-Party Services and SDKs</h2>
-        <p>Our app uses the following third-party services and SDKs:</p>
+        <p>The app integrates the following services:</p>
         <ul>
           <li>
-            <strong>Firebase Analytics (Google):</strong> For app usage
-            analytics and crash reporting. Data collected: Device information,
-            app usage statistics, crash reports. Privacy Policy:
+            <strong>Firebase Analytics (Google):</strong> Usage analytics and
+            crash reporting. Collected data: device details, usage statistics,
+            crash diagnostics.
             <a href="https://policies.google.com/privacy" target="_blank"
-              >https://policies.google.com/privacy</a
+              >Privacy Policy</a
             >
           </li>
           <li>
-            <strong>Google AdMob (Google):</strong> For displaying
-            advertisements. Data collected: Device information, advertising
-            identifiers, app usage data. Privacy Policy:
-            <a href="https://policies.google.com/privacy" target="_blank"
-              >https://policies.google.com/privacy</a
+            <strong>App Store Connect (Apple):</strong> Processing of the
+            one-time purchase. Collected data: purchase history, payment status.
+            <a
+              href="https://www.apple.com/legal/privacy/en-ww/"
+              target="_blank"
+              >Privacy Policy</a
             >
           </li>
           <li>
-            <strong>App Store Connect (Apple):</strong> For in-app purchases and
-            subscriptions. Data collected: Purchase history, subscription
-            status, payment information. Privacy Policy:
-            <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank"
-              >https://www.apple.com/legal/privacy/en-ww/</a
-            >
-          </li>
-          <li>
-            <strong>StoreKit (Apple):</strong> For processing in-app purchases.
-            Data collected: Purchase transactions, receipt validation. Privacy
-            Policy:
-            <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank"
-              >https://www.apple.com/legal/privacy/en-ww/</a
+            <strong>StoreKit (Apple):</strong> Purchase validation and restore
+            flows. Collected data: transaction receipts, entitlement status.
+            <a
+              href="https://www.apple.com/legal/privacy/en-ww/"
+              target="_blank"
+              >Privacy Policy</a
             >
           </li>
         </ul>
 
         <h2>5. Data Sharing</h2>
         <p>
-          We do not sell, trade, or otherwise transfer your personal information
-          to third parties except:
+          We do not sell or rent your personal information. Data is shared only:
         </p>
         <ul>
           <li>With your explicit consent</li>
           <li>To comply with legal obligations</li>
-          <li>To protect our rights and safety</li>
-          <li>Through aggregated, anonymized data for analytics</li>
+          <li>To protect our rights, property, or safety</li>
+          <li>
+            In aggregated, anonymized form for analytics or performance insights
+          </li>
         </ul>
 
         <h2>6. Your Rights</h2>
-        <p>You have the right to:</p>
+        <p>You may request to:</p>
         <ul>
           <li>Access your personal data</li>
           <li>Correct inaccurate data</li>
-          <li>Delete your data</li>
-          <li>Export your data</li>
-          <li>Withdraw consent at any time</li>
+          <li>Delete stored data</li>
+          <li>Export a copy of your data</li>
+          <li>Withdraw consent for optional data processing</li>
         </ul>
 
         <h2>7. Data Retention Periods</h2>
-        <p>We retain your data for specific periods as follows:</p>
+        <p>We retain information only as long as necessary:</p>
         <ul>
           <li>
-            <strong>User Account Data:</strong> Retained for as long as your
-            account is active, or until you delete your account
+            <strong>Local App Data:</strong> Stored on your device until you
+            delete the app or remove the data from settings
           </li>
           <li>
-            <strong>Learning Progress Data:</strong> Retained for 3 years after
-            your last app activity, then automatically deleted
+            <strong>iCloud Backup Data:</strong> Retained per your Apple iCloud
+            settings and can be removed through Apple services
           </li>
           <li>
-            <strong>Analytics Data:</strong> Retained for 2 years, then
+            <strong>Analytics Data:</strong> Retained up to 24 months, then
             anonymized or deleted
           </li>
           <li>
-            <strong>Crash Reports:</strong> Retained for 1 year, then
-            automatically deleted
+            <strong>Crash Reports:</strong> Retained up to 12 months for
+            diagnostics
           </li>
           <li>
-            <strong>Purchase Records:</strong> Retained for 7 years as required
-            by tax and accounting regulations
+            <strong>Purchase Records:</strong> Retained up to 7 years to satisfy
+            tax and accounting requirements
           </li>
           <li>
-            <strong>Support Communications:</strong> Retained for 2 years after
-            resolution
-          </li>
-          <li>
-            <strong>Marketing Data:</strong> Retained until you opt out or for 2
-            years, whichever comes first
+            <strong>Support Communications:</strong> Retained up to 24 months
+            after resolution
           </li>
         </ul>
         <p>
-          You can request deletion of your data at any time through app settings
-          or by contacting us directly.
+          You can request deletion of data via app settings or by contacting us
+          directly.
         </p>
 
         <h2>8. Children's Privacy (Under 13)</h2>
         <p>
-          Our app is suitable for users aged 4+ and complies with children's
-          privacy regulations including COPPA (Children's Online Privacy
-          Protection Act).
+          WordNut is suitable for users aged 4+ and complies with COPPA and
+          other child privacy regulations.
         </p>
-        <h3>8.1 Data Collection from Children Under 13</h3>
+        <h3>8.1 Information from Children Under 13</h3>
         <ul>
           <li>
-            We do not knowingly collect personal information from children under
-            13 without verifiable parental consent
+            We do not knowingly collect personal data from children under 13
+            without verifiable parental consent
           </li>
           <li>
-            If we discover we have collected personal information from a child
-            under 13 without parental consent, we will delete it immediately
+            If unauthorized data is discovered, it is deleted promptly
           </li>
           <li>
-            Parents can review, delete, or refuse further collection of their
-            child's information
+            Parents may review, delete, or refuse further collection of their
+            child’s data
           </li>
-          <li>
-            We do not use personal information from children under 13 for
-            marketing purposes
-          </li>
+          <li>No personal data from children is used for marketing purposes</li>
         </ul>
         <h3>8.2 Parental Controls and Consent</h3>
         <ul>
           <li>
-            Parents must provide verifiable consent before we collect personal
-            information from children under 13
+            Parental consent is required before collecting personal information
+            from children under 13
           </li>
-          <li>Parents can revoke consent at any time by contacting us</li>
-          <li>
-            We provide parents with access to their child's personal information
-          </li>
-          <li>
-            Parents can request deletion of their child's personal information
-          </li>
+          <li>Consent can be withdrawn at any time by contacting us</li>
+          <li>Parents have access to their child’s personal information</li>
+          <li>Parents can request deletion at any time</li>
         </ul>
         <h3>8.3 Educational Content and Safety</h3>
         <ul>
-          <li>Our app provides educational content suitable for children</li>
-          <li>
-            We do not display inappropriate advertisements to children under 13
-          </li>
-          <li>
-            We implement appropriate content filtering and safety measures
-          </li>
-          <li>
-            We do not collect precise location data from children under 13
-          </li>
+          <li>The app provides age-appropriate educational content</li>
+          <li>No inappropriate advertising is shown to children</li>
+          <li>Content filters and safety measures are in place</li>
+          <li>No precise geolocation data is collected from children</li>
         </ul>
 
         <h2>9. Updates to This Policy</h2>
         <p>
-          We may update this Privacy Policy from time to time. We will notify
-          you of any material changes through the app or other communication
-          methods.
+          We may update this Privacy Policy periodically. Material changes are
+          communicated in-app or via other appropriate channels.
         </p>
 
         <h2>10. Contact Information</h2>
-        <p>For privacy-related questions or concerns, please contact us at:</p>
         <p>
-          <strong>Email:</strong> spikedevsup@gmail.com <br />
-          <strong>App Store:</strong> WordNut - English Vocabulary Learning
+          <strong>Email:</strong> spikedevsup@gmail.com<br />
+          <strong>App Store:</strong> WordNut – English Vocabulary Learning
         </p>
       </div>
 
-      <div id="tr-content" class="content">
+      <div id="tr-content" class="content" role="tabpanel" aria-hidden="true">
         <h1>WordNut Gizlilik Politikası</h1>
 
         <div class="highlight">
@@ -341,18 +335,18 @@
         </div>
 
         <p>
-          WordNut ("biz," "bizim," veya "bize") gizliliğinizi korumayı taahhüt
-          eder. Bu Gizlilik Politikası, mobil uygulamamızı kullandığınızda
-          bilgilerinizi nasıl topladığımızı, kullandığımızı, ifşa ettiğimizi ve
-          koruduğumuzu açıklar.
+          WordNut (“biz,” “bizim” veya “bize”) gizliliğinizi korumayı taahhüt
+          eder. Bu Gizlilik Politikası premium mobil uygulamamızı
+          kullandığınızda bilgilerinizi nasıl topladığımızı, kullandığımızı,
+          paylaştığımızı ve koruduğumuzu açıklar.
         </p>
 
         <h2>1. Topladığımız Bilgiler</h2>
         <h3>1.1 Sağladığınız Bilgiler</h3>
         <ul>
           <li>
-            <strong>Kullanıcı Tercihleri:</strong> Dil ayarları, quiz tercihleri
-            ve uygulama yapılandırması
+            <strong>Kullanıcı Tercihleri:</strong> Dil ayarları, quiz tercihleri,
+            uygulama yapılandırması
           </li>
           <li>
             <strong>Öğrenme Verileri:</strong> Quiz sonuçları, favori kelimeler,
@@ -371,212 +365,186 @@
             uygulama sürümü
           </li>
           <li>
-            <strong>Kullanım Analitikleri:</strong> Kullanılan uygulama
-            özellikleri, oturum süresi, çökme raporları
+            <strong>Kullanım Analitiği:</strong> Kullanılan özellikler, oturum
+            süreleri, toplam kullanım trendleri
           </li>
           <li>
-            <strong>Performans Verileri:</strong> Yükleme süreleri, hata logları
-            ve teknik tanılamalar
+            <strong>Performans Verileri:</strong> Çökme raporları, yükleme
+            süreleri ve teknik tanılamalar
           </li>
         </ul>
 
-        <h2>2. Bilgilerinizi Nasıl Kullanırız</h2>
-        <p>Toplanan bilgileri şunlar için kullanırız:</p>
+        <h2>2. Bilgilerinizi Nasıl Kullanıyoruz</h2>
+        <p>Toplanan verileri şu amaçlarla kullanırız:</p>
         <ul>
-          <li>Uygulama işlevselliğini sağlamak ve sürdürmek</li>
-          <li>Öğrenme deneyiminizi kişiselleştirmek</li>
-          <li>İlerlemenizi takip etmek ve istatistik sağlamak</li>
-          <li>Uygulama performansını ve kullanıcı deneyimini geliştirmek</li>
-          <li>Müşteri desteği sağlamak</li>
-          <li>
-            Uygulama geliştirmeleri için kullanım modellerini analiz etmek
-          </li>
+          <li>Tam premium uygulama deneyimini sunmak ve sürdürmek</li>
+          <li>İçerikleri ve önerileri kişiselleştirmek</li>
+          <li>Öğrenme ilerlemenizi izlemek ve istatistik sağlamak</li>
+          <li>Performansı ve kararlılığı geliştirmek</li>
+          <li>Destek taleplerine yanıt vermek</li>
+          <li>Ürün geliştirmeleri için kullanım trendlerini analiz etmek</li>
         </ul>
 
         <h2>3. Veri Depolama ve Güvenlik</h2>
         <p>
-          Verileriniz cihazınızda yerel olarak ve güvenli bulut hizmetlerinde
-          saklanır:
+          Verileriniz cihazınızda saklanır ve tercihe bağlı olarak güvenli
+          şekilde yedeklenebilir:
         </p>
         <ul>
           <li>
             <strong>Yerel Depolama:</strong> Temel uygulama verileri iOS güvenli
-            depolama kullanılarak yerel olarak saklanır
+            depolaması kullanılarak cihazınızda tutulur
           </li>
           <li>
-            <strong>Bulut Yedekleme:</strong> Veri senkronizasyonu için iCloud'a
-            isteğe bağlı yedekleme
+            <strong>Bulut Yedekleme:</strong> iCloud üzerinden isteğe bağlı
+            senkronizasyon ve geri yükleme yapılabilir
           </li>
           <li>
-            <strong>Güvenlik:</strong> Endüstri standardı şifreleme ve güvenlik
-            önlemleri uygularız
+            <strong>Güvenlik:</strong> Veri aktarımı ve saklaması için sektör
+            standardı güvenlik önlemleri uygularız
           </li>
         </ul>
 
-        <h2>4. Üçüncü Taraf Hizmetleri ve SDK'lar</h2>
-        <p>
-          Uygulamamız aşağıdaki üçüncü taraf hizmetleri ve SDK'ları kullanır:
-        </p>
+        <h2>4. Üçüncü Taraf Hizmetleri ve SDK’lar</h2>
+        <p>Uygulama aşağıdaki hizmetlerle entegredir:</p>
         <ul>
           <li>
-            <strong>Firebase Analytics (Google):</strong> Uygulama kullanım
-            analitikleri ve çökme raporlama için. Toplanan veriler: Cihaz
-            bilgileri, uygulama kullanım istatistikleri, çökme raporları.
-            Gizlilik Politikası:
+            <strong>Firebase Analytics (Google):</strong> Kullanım analitiği ve
+            çökme raporları. Toplanan veriler: cihaz bilgileri, kullanım
+            istatistikleri, çökme tanıları.
             <a href="https://policies.google.com/privacy" target="_blank"
-              >https://policies.google.com/privacy</a
+              >Gizlilik Politikası</a
             >
           </li>
           <li>
-            <strong>Google AdMob (Google):</strong> Reklam gösterimi için.
-            Toplanan veriler: Cihaz bilgileri, reklam tanımlayıcıları, uygulama
-            kullanım verileri. Gizlilik Politikası:
-            <a href="https://policies.google.com/privacy" target="_blank"
-              >https://policies.google.com/privacy</a
+            <strong>App Store Connect (Apple):</strong> Tek seferlik satın alma
+            işlemlerinin yürütülmesi. Toplanan veriler: satın alma geçmişi,
+            ödeme durumu.
+            <a
+              href="https://www.apple.com/legal/privacy/en-ww/"
+              target="_blank"
+              >Gizlilik Politikası</a
             >
           </li>
           <li>
-            <strong>App Store Connect (Apple):</strong> Uygulama içi satın
-            almalar ve abonelikler için. Toplanan veriler: Satın alma geçmişi,
-            abonelik durumu, ödeme bilgileri. Gizlilik Politikası:
-            <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank"
-              >https://www.apple.com/legal/privacy/en-ww/</a
-            >
-          </li>
-          <li>
-            <strong>StoreKit (Apple):</strong> Uygulama içi satın almaları
-            işlemek için. Toplanan veriler: Satın alma işlemleri, makbuz
-            doğrulama. Gizlilik Politikası:
-            <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank"
-              >https://www.apple.com/legal/privacy/en-ww/</a
+            <strong>StoreKit (Apple):</strong> Satın alma doğrulama ve geri yükleme
+            süreçleri. Toplanan veriler: işlem makbuzları, erişim durumları.
+            <a
+              href="https://www.apple.com/legal/privacy/en-ww/"
+              target="_blank"
+              >Gizlilik Politikası</a
             >
           </li>
         </ul>
 
         <h2>5. Veri Paylaşımı</h2>
         <p>
-          Kişisel bilgilerinizi üçüncü taraflara satmaz, takas etmez veya başka
-          şekilde aktarmayız, bunlar hariç:
+          Kişisel verilerinizi satmaz veya kiralamayız. Paylaşım yalnızca şu
+          durumlarda gerçekleşir:
         </p>
         <ul>
-          <li>Açık onayınız ile</li>
+          <li>Açık onayınız olduğunda</li>
           <li>Yasal yükümlülükleri yerine getirmek için</li>
-          <li>Haklarımızı ve güvenliğimizi korumak için</li>
-          <li>Analitik için toplu, anonimleştirilmiş veriler aracılığıyla</li>
+          <li>Haklarımızı, mülkiyetimizi veya güvenliğimizi korumak için</li>
+          <li>
+            Analiz için toplu ve anonimleştirilmiş veri üretiminde
+          </li>
         </ul>
 
         <h2>6. Haklarınız</h2>
         <p>Aşağıdaki haklara sahipsiniz:</p>
         <ul>
-          <li>Kişisel verilerinize erişim</li>
-          <li>Hatalı verileri düzeltme</li>
-          <li>Verilerinizi silme</li>
-          <li>Verilerinizi dışa aktarma</li>
-          <li>Onayı herhangi bir zamanda geri çekme</li>
+          <li>Kişisel verilerinize erişmek</li>
+          <li>Hatalı verileri düzeltmek</li>
+          <li>Verilerinizi silmek</li>
+          <li>Verilerinizi dışa aktarmak</li>
+          <li>Opsiyonel veri işlemeye verdiğiniz onayı geri çekmek</li>
         </ul>
 
         <h2>7. Veri Saklama Süreleri</h2>
-        <p>Verilerinizi aşağıdaki belirli süreler boyunca saklarız:</p>
+        <p>Veriler yalnızca gerekli süre boyunca saklanır:</p>
         <ul>
           <li>
-            <strong>Kullanıcı Hesap Verileri:</strong> Hesabınız aktif olduğu
-            sürece veya hesabınızı silene kadar saklanır
+            <strong>Yerel Uygulama Verisi:</strong> Uygulamayı silene veya
+            ayarlardan veriyi kaldırana kadar cihazınızda tutulur
           </li>
           <li>
-            <strong>Öğrenme İlerleme Verileri:</strong> Son uygulama
-            aktivitenizden 3 yıl sonrasına kadar saklanır, ardından otomatik
-            olarak silinir
+            <strong>iCloud Yedek Verisi:</strong> Apple iCloud ayarlarınıza göre
+            saklanır; Apple üzerinden kaldırabilirsiniz
           </li>
           <li>
-            <strong>Analitik Veriler:</strong> 2 yıl saklanır, ardından
+            <strong>Analitik Verisi:</strong> 24 aya kadar saklanır, ardından
             anonimleştirilir veya silinir
           </li>
           <li>
-            <strong>Çökme Raporları:</strong> 1 yıl saklanır, ardından otomatik
-            olarak silinir
+            <strong>Çökme Raporları:</strong> Tanılama için 12 aya kadar tutulur
           </li>
           <li>
             <strong>Satın Alma Kayıtları:</strong> Vergi ve muhasebe
-            düzenlemeleri gereği 7 yıl saklanır
+            yükümlülükleri gereği 7 yıl saklanır
           </li>
           <li>
-            <strong>Destek İletişimleri:</strong> Çözümden 2 yıl sonrasına kadar
-            saklanır
-          </li>
-          <li>
-            <strong>Pazarlama Verileri:</strong> Vazgeçene kadar veya 2 yıl,
-            hangisi önce gelirse
+            <strong>Destek İletişimleri:</strong> Çözüm tamamlandıktan sonra 24
+            aya kadar saklanır
           </li>
         </ul>
         <p>
-          Verilerinizi uygulama ayarları aracılığıyla veya doğrudan bizimle
-          iletişime geçerek istediğiniz zaman silme talep edebilirsiniz.
+          Verilerinizin silinmesini uygulama ayarlarından veya doğrudan bizimle
+          iletişime geçerek talep edebilirsiniz.
         </p>
 
         <h2>8. Çocukların Gizliliği (13 Yaş Altı)</h2>
         <p>
-          Uygulamamız 4+ yaş kullanıcılar için uygundur ve COPPA (Çocukların
-          Çevrimiçi Gizlilik Koruması Yasası) dahil çocukların gizlilik
-          düzenlemelerine uyar.
+          WordNut 4+ yaş kullanıcılar için uygundur ve COPPA dahil çocuk
+          gizliliği düzenlemelerine uyar.
         </p>
-        <h3>8.1 13 Yaş Altı Çocuklardan Veri Toplama</h3>
+        <h3>8.1 13 Yaş Altı Çocuklardan Bilgi Toplama</h3>
         <ul>
           <li>
-            13 yaş altı çocuklardan doğrulanabilir ebeveyn onayı olmadan kişisel
-            bilgi toplamayız
+            13 yaş altından doğrulanabilir ebeveyn onayı olmadan kişisel bilgi
+            toplamıyoruz
           </li>
           <li>
-            Ebeveyn onayı olmadan 13 yaş altı bir çocuktan kişisel bilgi
-            topladığımızı keşfedersek, hemen sileceğiz
+            Yetkisiz veri tespit edildiğinde derhal silinir
           </li>
           <li>
-            Ebeveynler çocuklarının bilgilerini inceleyebilir, silebilir veya
-            daha fazla toplamayı reddedebilir
+            Ebeveynler çocuklarının verilerini inceleyebilir, silebilir veya
+            toplanmasına engel olabilir
           </li>
-          <li>
-            13 yaş altı çocuklardan alınan kişisel bilgileri pazarlama amaçları
-            için kullanmayız
-          </li>
+          <li>13 yaş altı verileri pazarlama amaçlı kullanılmaz</li>
         </ul>
         <h3>8.2 Ebeveyn Kontrolleri ve Onay</h3>
         <ul>
           <li>
-            13 yaş altı çocuklardan kişisel bilgi toplamadan önce ebeveynler
-            doğrulanabilir onay sağlamalıdır
+            13 yaş altı çocuklardan veri toplamadan önce ebeveyn onayı gerekir
           </li>
           <li>
-            Ebeveynler bizimle iletişime geçerek onayı herhangi bir zamanda geri
-            çekebilir
+            Onay, bizimle iletişime geçilerek her zaman geri çekilebilir
           </li>
-          <li>Ebeveynlere çocuklarının kişisel bilgilerine erişim sağlarız</li>
+          <li>Ebeveynlere çocuklarının verilerine erişim sağlanır</li>
           <li>
-            Ebeveynler çocuklarının kişisel bilgilerinin silinmesini talep
-            edebilir
+            Çocuk verilerinin silinmesi her zaman talep edilebilir
           </li>
         </ul>
         <h3>8.3 Eğitim İçeriği ve Güvenlik</h3>
         <ul>
-          <li>Uygulamamız çocuklar için uygun eğitim içeriği sağlar</li>
-          <li>13 yaş altı çocuklara uygunsuz reklamlar göstermeyiz</li>
-          <li>Uygun içerik filtreleme ve güvenlik önlemleri uygularız</li>
-          <li>13 yaş altı çocuklardan kesin konum verisi toplamayız</li>
+          <li>Uygulama çocuklara uygun eğitim içeriği sunar</li>
+          <li>Uygunsuz reklamlar gösterilmez</li>
+          <li>İçerik filtreleri ve güvenlik önlemleri uygulanır</li>
+          <li>13 yaş altından hassas konum verisi toplanmaz</li>
         </ul>
 
-        <h2>9. Bu Politikanın Güncellemeleri</h2>
+        <h2>9. Politika Güncellemeleri</h2>
         <p>
-          Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Önemli
-          değişiklikleri uygulama veya diğer iletişim yöntemleri aracılığıyla
-          size bildireceğiz.
+          Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli
+          değişiklikler uygulama içinden veya diğer iletişim kanallarından
+          duyurulur.
         </p>
 
         <h2>10. İletişim Bilgileri</h2>
         <p>
-          Gizlilikle ilgili sorular veya endişeler için lütfen bizimle iletişime
-          geçin:
-        </p>
-        <p>
-          <strong>E-posta:</strong> spikedevsup@gmail.com <br />
-          <strong>App Store:</strong> WordNut - English Vocabulary Learning
+          <strong>E-posta:</strong> spikedevsup@gmail.com<br />
+          <strong>App Store:</strong> WordNut – English Vocabulary Learning
         </p>
       </div>
 
@@ -586,19 +554,26 @@
     </div>
 
     <script>
+      const buttons = document.querySelectorAll(".lang-btn");
+      const contentSections = document.querySelectorAll(".content");
+
       function showLanguage(lang) {
-        // Hide all content
-        document.getElementById("en-content").classList.remove("active");
-        document.getElementById("tr-content").classList.remove("active");
+        contentSections.forEach((section) => {
+          const isActive = section.id === `${lang}-content`;
+          section.classList.toggle("active", isActive);
+          section.setAttribute("aria-hidden", !isActive);
+        });
 
-        // Remove active class from all buttons
-        const buttons = document.querySelectorAll(".lang-btn");
-        buttons.forEach((btn) => btn.classList.remove("active"));
-
-        // Show selected content and activate button
-        document.getElementById(lang + "-content").classList.add("active");
-        event.target.classList.add("active");
+        buttons.forEach((btn) => {
+          const isActive = btn.dataset.lang === lang;
+          btn.classList.toggle("active", isActive);
+          btn.setAttribute("aria-selected", isActive);
+        });
       }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => showLanguage(btn.dataset.lang));
+      });
     </script>
   </body>
 </html>
