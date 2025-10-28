@@ -13,92 +13,69 @@
 
 ## 🎯 WordNut Nedir?
 
-WordNut, İngilizce kelime öğrenmeyi kolaylaştıran, kullanıcı dostu bir iOS uygulamasıdır. Günlük hayatta sık kullanılan İngilizce kelimeleri Türkçe anlamlarıyla birlikte öğrenmenizi sağlar.
+WordNut, İngilizce kelime öğrenmeyi kolaylaştıran kullanıcı dostu bir iOS uygulamasıdır. Tek seferlik satın alma ile uygulamanın tüm özellikleri ve içerikleri kalıcı olarak açılır.
 
-### ✨ Temel Özellikler
+### ✨ Öne Çıkan Özellikler
 
-- 📖 **Kapsamlı Kelime Kütüphanesi**: Binlerce günlük İngilizce kelime
-- 🧠 **Akıllı Öğrenme Sistemi**: Seviye bazlı kelime kategorileri
-- ❤️ **Favori Kelimeler**: Önemli kelimeleri kaydedin ve tekrar edin
-- 📊 **İlerleme Takibi**: Öğrendiğiniz kelimeleri takip edin
-- 🌙 **Karanlık Mod**: Gözlerinizi koruyun
+- 📖 **Kapsamlı Kelime Kütüphanesi**: Binlerce günlük İngilizce kelime ve örnek cümle
+- 🧠 **Akıllı Öğrenme Sistemi**: Seviye bazlı kategoriler ve kişiselleştirilmiş öneriler
+- ❤️ **Favori Kelimeler**: Önemli kelimeleri kaydedin, tekrar edin
+- 📊 **İlerleme Takibi**: Anlık performans grafikleri ve istatistikler
+- 🌙 **Karanlık Mod**: Göz yormayan tema seçenekleri
 - 🌍 **Çoklu Dil Desteği**: Türkçe ve İngilizce arayüz
 
 ---
 
 ## 🎮 Quiz ve Öğrenme Modları
 
-### 🆓 Ücretsiz Özellikler
+Tek seferlik satın alma sonrasında aşağıdaki tüm modlara sınırsız erişim sağlanır:
 
-- **İngilizce → Türkçe Quiz**: İngilizce kelimelerin Türkçe anlamlarını öğrenin
-- **Türkçe → İngilizce Quiz**: Türkçe anlamlardan İngilizce kelimeleri hatırlayın
-- **Temel Kelime Listesi**: Her seviyeden 200 kelimeye ücretsiz erişim
-
-### 👑 Premium Özellikler
-
-- **🎤 Sesli Quiz**: Kelimeleri dinleyerek öğrenin
-- **⏱️ Hızlı Quiz**: Zaman baskısı altında hızlı düşünme
-- **🏃 Maraton Quiz**: 50 soruluk uzun quiz deneyimi
-- **🔗 Eşleştirme Quiz**: Kelime-anlam eşleştirme oyunu
-- **📚 Sınırsız Kelime**: Tüm kelimelere sınırsız erişim
-- **🚫 Reklamsız Deneyim**: Kesintisiz öğrenme
-- **☁️ Bulut Senkronizasyonu**: Verilerinizi güvenle saklayın
+- 🎤 **Sesli Quiz**: Kelimeleri dinleyerek telaffuz ve anlam eşleştirme
+- ⏱️ **Hızlı Quiz**: Süreli quizler ile refleks geliştirme
+- 🏃 **Maraton Quiz**: 50 soruluk uzun soluklu öğrenme seansları
+- 🔗 **Eşleştirme Quiz**: Kelime-anlam eşleştirme oyunları
+- 🆓 **Klasik Quizler**: İngilizce → Türkçe ve Türkçe → İngilizce yönlü testler
+- 📚 **Sınırsız Kelime Erişimi**: Tüm seviye ve kategorilere erişim
 
 ---
 
 ## 📱 Uygulama Ekranları
 
 ### 🏠 Ana Sayfa
-
-- Kelime listesi ve arama özelliği
-- Seviye bazlı filtreleme
-- Favori kelimelerinizi hızlıca bulun
+- Geniş kelime listesi ve arama
+- Seviye, kategori ve favori filtreleri
 
 ### 🧠 Quiz Merkezi
-
-- Farklı quiz türleri arasından seçim
+- Farklı quiz türleri arasında geçiş
 - Gerçek zamanlı performans takibi
-- Detaylı sonuç analizi
 
 ### 📈 İstatistikler
-
-- Günlük, haftalık, aylık ilerleme
-- Quiz performans grafikleri
-- Öğrenme hızı analizi
+- Günlük, haftalık, aylık ilerleme raporları
+- Öğrenme eğrileri ve başarı grafikleri
 
 ### ⚙️ Ayarlar
-
-- Dil tercihleri
-- Görünüm ayarları
-- Premium üyelik yönetimi
+- Dil ve tema tercihleri
+- Verileri yedekleme ve geri yükleme seçenekleri
+- Destek ve iletişim kanalları
 
 ---
 
 ## 🎯 Hedef Kitle
 
-- **🎓 Öğrenciler**: İngilizce derslerinde başarı için
-- **💼 Çalışanlar**: İş hayatında İngilizce becerilerini geliştirmek için
-- **✈️ Seyahat Severler**: Yurtdışı seyahatlerinde iletişim için
-- **🧠 Kendini Geliştirenler**: Sürekli öğrenme tutkusu olanlar için
+- **🎓 Öğrenciler**: Sınav ve ders başarısı için
+- **💼 Profesyoneller**: İş hayatında İngilizce kullanımını güçlendirmek için
+- **✈️ Seyahat Severler**: Yolculuklarda etkin iletişim için
+- **🧠 Yaşam Boyu Öğrenenler**: Kelime dağarcığını genişletmek isteyen herkes için
 
 ---
 
 ## 🚀 Neden WordNut?
 
-### ✅ Avantajlar
-
-- **Kullanıcı Dostu Arayüz**: Sezgisel ve kolay kullanım
-- **Bilimsel Yaklaşım**: Etkili öğrenme teknikleri
-- **Kişiselleştirilmiş Deneyim**: Kendi hızınızda öğrenin
-- **Güvenilir İçerik**: Günlük hayatta kullanılan kelimeler
-- **Sürekli Güncelleme**: Yeni kelimeler ve özellikler
-
-### 🎯 Öğrenme Hedefleri
-
-- Günlük hayatta kullanılan İngilizce kelimeleri öğrenin
-- Kelime dağarcığınızı genişletin
-- İngilizce okuma ve anlama becerilerinizi geliştirin
-- Sınavlarda başarılı olun (YDS, TOEFL, IELTS vb.)
+- **Kullanıcı Dostu Arayüz**: Hızlı, sezgisel kullanım
+- **Bilimsel Öğrenme Yaklaşımı**: Aralıklı tekrar ve seviyelendirme
+- **Kişiselleştirilmiş Deneyim**: Öğrenme hızınıza uyum sağlar
+- **Güncel ve Güvenilir İçerik**: Günlük hayatta kullanılan kelime ve kalıplar
+- **Sürekli Güncelleme**: Yeni kelime paketleri ve quiz modları
 
 ---
 
@@ -107,54 +84,45 @@ WordNut, İngilizce kelime öğrenmeyi kolaylaştıran, kullanıcı dostu bir iO
 - **Platform**: iOS 15.0+
 - **Dil**: Swift & SwiftUI
 - **Mimari**: MVVM
-- **Veri Saklama**: Core Data & UserDefaults
-- **Ağ**: Firebase & REST API
-- **Reklam**: Google AdMob
-- **Ödeme**: StoreKit 2
+- **Veri Saklama**: Core Data, UserDefaults, iCloud Yedekleme
+- **Analitik & Servisler**: Firebase, REST API
+- **Ödeme**: StoreKit 2 (Tek seferlik satın alma)
 
 ---
 
-## 🎁 Premium Üyelik
+## 💎 Tek Seferlik Satın Alma Avantajları
 
-### 💎 Premium Avantajları
-
-- **Sınırsız Kelime Erişimi**: Tüm kelimelere sınırsız erişim
-- **Gelişmiş Quiz Modları**: Sesli, hızlı, maraton quizleri
-- **Reklamsız Deneyim**: Kesintisiz öğrenme
-- **Bulut Senkronizasyonu**: Verilerinizi güvenle saklayın
-- **Öncelikli Destek**: Hızlı teknik destek
-
-### 💳 Üyelik Planları
-
-- **Aylık**: ₺29.99/ay
-- **Yıllık**: ₺199.99/yıl (₺16.67/ay - %44 tasarruf)
-- **Ömür Boyu**: ₺499.99 (Tek seferlik ödeme)
+- **Tüm Özelliklere Anında Erişim**
+- **Sınırsız Kelime ve Quiz Modu Kullanımı**
+- **Reklamsız ve Kesintisiz Deneyim**
+- **Bulut Senkronizasyonu ile Güvenli Yedekleme**
+- **Öncelikli Destek Kanalları**
 
 ---
 
 ## 🔒 Gizlilik ve Güvenlik
 
-- **Kişisel Veriler**: Sadece uygulama içi kullanım
-- **Şifreleme**: Hassas veriler şifrelenmiş olarak saklanır
-- **Reklam**: Kişiselleştirilmemiş reklamlar
-- **Analitik**: Anonim kullanım istatistikleri
+- **Kişisel Veriler**: Yalnızca uygulama içi kullanım için işlenir
+- **Şifreleme**: Hassas veriler güvenli şekilde saklanır
+- **Reklamsız Deneyim**: Takip amaçlı üçüncü parti reklam SDK’sı yok
+- **Analitik**: Anonim kullanım istatistikleriyle performans iyileştirme
 
 ---
 
 ## 📞 Destek ve İletişim
 
 - **E-posta**: spikedevsup@gmail.com
-- **Uygulama İçi**: Ayarlar > Geri Bildirim
+- **Uygulama İçi Destek**: Ayarlar > Geri Bildirim
 
 ---
 
 ## ⭐ Değerlendirme
 
-Uygulamayı beğendiyseniz App Store'da 5 yıldız değerlendirme yapmayı unutmayın! Bu, geliştiricileri motive eder ve daha iyi özellikler eklemelerine yardımcı olur.
+WordNut’u beğendiyseniz App Store’da 5 yıldız vermeyi unutmayın! Geri bildirimleriniz yeni özellikler için bize ilham verir.
 
 ---
 
 <div align="center">
   <p><strong>🎯 Hedefiniz: İngilizce kelime dağarcığınızı genişletin!</strong></p>
-  <p><em>WordNut ile İngilizce öğrenmek artık çok daha kolay ve eğlenceli!</em></p>
+  <p><em>WordNut ile İngilizce öğrenmek artık tek seferlik satın alma ile tamamen sizin.</em></p>
 </div>
